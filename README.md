@@ -1,4 +1,4 @@
-# Student Attendance System (React + Firebase)📚🧑‍🎓
+# 👩‍💻Student Attendance System (React + Firebase)📚🧑‍🎓
 
 An SPA for managing course attendance. Users authenticate with Firebase, select a course, add/remove students, and toggle each student's status between Present, Absent, and Duty Leave. Built with React (Create React App), React Router, and a lightweight state container using React Context + useReducer. Firebase is initialized for Auth and Firestore, with Auth used in production code and Firestore ready for persistence.
 
