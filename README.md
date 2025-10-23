@@ -14,6 +14,10 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 - Summary counts per status
 - Protected Home route (redirects to Login if unauthenticated)
 
+
+![demo](https://github.com/AMMU-N-RAJ/Student-Attendance-System/blob/master/attsym2.gif)
+
+
 ## ⚙️Tech stack
 
 - React 18 (Create React App)
