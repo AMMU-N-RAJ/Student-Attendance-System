@@ -5,8 +5,6 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 ![demo](https://github.com/AMMU-N-RAJ/Student-Attendance-System/blob/master/Att-Sym.gif)
 
 
-![demo](https://github.com/AMMU-N-RAJ/Student-Attendance-System/blob/master/attsym2.gif)
-
 ## 🌟Features
 
 - Email/password authentication (Firebase Auth)
