@@ -4,7 +4,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 
 ![demo](https://github.com/AMMU-N-RAJ/Face-Detection-Using-OpenCV-Haarcascade/blob/main/demo.gif)
 
-##🌟 Features
+## 🌟Features
 
 - Email/password authentication (Firebase Auth)
 - Course list with per-course attendance view
@@ -13,7 +13,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 - Summary counts per status
 - Protected Home route (redirects to Login if unauthenticated)
 
-##⚙️ Tech stack
+## ⚙️Tech stack
 
 - React 18 (Create React App)
 - React Router v6
@@ -21,7 +21,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 - Firebase Web SDK (Auth, Firestore initialized, Analytics)
 - CSS (component-scoped styles)
 
-##🍀 Project structure
+## 🍀Project structure
 
 ```
 attendance-system/
@@ -43,7 +43,7 @@ attendance-system/
 		App.css, index.css, reportWebVitals.js
 ```
 
-##😅 How it works
+## 😅How it works
 
 ### ⚙️App startup
 
@@ -77,7 +77,7 @@ attendance-system/
 - `Header.js` shows the current user and a Sign In/Out control; `auth.signOut()` logs out.
 - `App.js` listens for auth changes and updates global `user`.
 
-###⚙️Attendance management
+### ⚙️Attendance management
 
 - `Home.js` lists courses from global state. Clicking a course dispatches `SELECT_COURSE` and navigates to `/course/:courseId`.
 - `Checkout.js` shows the selected course's students:
@@ -102,7 +102,7 @@ If you want to persist courses and students:
 
 > Tip: Keep Firestore reads/writes in a small service module (e.g., `src/services/firebaseService.js`) to keep components clean and testable.
 
-##👩‍💻 Local development
+## 👩‍💻Local development
 
 Prerequisites:
 
