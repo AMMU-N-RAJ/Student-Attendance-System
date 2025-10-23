@@ -1,0 +1,103 @@
+.home {
+  max-width: 1500px;
+  min-height: 100vh;
+  background: #d4560d;
+  padding: 20px;
+}
+
+.home__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.home__title {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.home__subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home__courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.home__course {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(2, 2, 2, 0.1);
+}
+
+.home__course:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.home__courseIcon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.home__courseName {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.home__courseInfo {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.home__courseButton {
+  background: #366ed8;
+  color: white;
+  border: 12;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.home__courseButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(88, 111, 216, 0.4);
+  color: #fdd701;
+  text-shadow: 0 0 10px #bea619,
+               0 0 20px #bea516,
+               0 0 30px #d49215;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home__title {
+    font-size: 2rem;
+  }
+
+  .home__subtitle {
+    font-size: 1rem;
+  }
+
+  .home__courses {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
