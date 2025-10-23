@@ -4,7 +4,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 
 ![demo](https://github.com/AMMU-N-RAJ/Face-Detection-Using-OpenCV-Haarcascade/blob/main/demo.gif)
 
-## Features
+##🌟 Features
 
 - Email/password authentication (Firebase Auth)
 - Course list with per-course attendance view
@@ -13,7 +13,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 - Summary counts per status
 - Protected Home route (redirects to Login if unauthenticated)
 
-## Tech stack
+##⚙️ Tech stack
 
 - React 18 (Create React App)
 - React Router v6
@@ -21,7 +21,7 @@ An SPA for managing course attendance. Users authenticate with Firebase, select 
 - Firebase Web SDK (Auth, Firestore initialized, Analytics)
 - CSS (component-scoped styles)
 
-## Project structure
+##🍀 Project structure
 
 ```
 attendance-system/
@@ -43,14 +43,14 @@ attendance-system/
 		App.css, index.css, reportWebVitals.js
 ```
 
-## How it works
+##😅 How it works
 
-### App startup
+### ⚙️App startup
 
 - `src/index.js` creates the React root and wraps the app with `StateProvider`, exposing global state and `dispatch` via context.
 - `src/App.js` registers `auth.onAuthStateChanged`. When the Firebase user changes, the app dispatches `SET_USER` to store the current user (or `null`).
 
-### Routing
+### ⚙️Routing
 
 - `react-router-dom` defines routes in `App.js`:
   - `/login` → `login.js`
@@ -58,7 +58,7 @@ attendance-system/
   - `/course/:courseId` (Course details) → `Checkout.js`
 - `Home.js` redirects unauthenticated users to `/login`.
 
-### State management
+### ⚙️State management
 
 - `StateProvider.js` provides a context wrapping `useReducer`.
 - `reducer.js` defines `initialState` and actions:
@@ -69,7 +69,7 @@ attendance-system/
   - `UPDATE_ATTENDANCE` — change one student's `status`
 - Note: By default, courses and students live only in memory. On refresh, they reset.
 
-### Authentication flow
+### ⚙️Authentication flow
 
 - `login.js` provides sign-in and registration using Firebase Auth:
   - `signInWithEmailAndPassword(auth, email, password)`
@@ -77,7 +77,7 @@ attendance-system/
 - `Header.js` shows the current user and a Sign In/Out control; `auth.signOut()` logs out.
 - `App.js` listens for auth changes and updates global `user`.
 
-### Attendance management
+###⚙️Attendance management
 
 - `Home.js` lists courses from global state. Clicking a course dispatches `SELECT_COURSE` and navigates to `/course/:courseId`.
 - `Checkout.js` shows the selected course's students:
@@ -86,11 +86,11 @@ attendance-system/
   - Click the colored status button to cycle status (`UPDATE_ATTENDANCE`).
 - The page shows a live summary of counts by status.
 
-### Styling
+### 😎Styling
 
 - Plain CSS files per component (BEM-like class names). For example, `.home__courseButton` includes a hover interaction that highlights the "View Attendance" button text.
 
-## Firebase configuration
+## 🍀Firebase configuration
 
 Firebase is initialized in `src/firebase.js` with your project's Web config. For client web apps, these keys are public and not secret, but you must secure your Firestore rules before enabling persistence.
 
@@ -102,7 +102,7 @@ If you want to persist courses and students:
 
 > Tip: Keep Firestore reads/writes in a small service module (e.g., `src/services/firebaseService.js`) to keep components clean and testable.
 
-## Local development
+##👩‍💻 Local development
 
 Prerequisites:
 
@@ -132,17 +132,17 @@ Build for production:
 npm run build
 ```
 
-## Deployment
+## 👩‍💻Deployment
 
 The production build is output to `build/`. You can deploy it to any static host (e.g., Firebase Hosting, Vercel, Netlify, GitHub Pages). If using Firebase Hosting, follow `firebase init hosting` and deploy the `build` folder.
 
-## Known limitations
+## 🫠Known limitations
 
 - Courses and students are not persisted by default; a page refresh resets data.
 - Minimal error handling and validation in forms.
 - Firestore rules are not configured in this repo; configure them before enabling writes.
 
-## Roadmap / next steps
+## 🛣️ Roadmap / next steps
 
 - Persist courses and students to Firestore (read on load, write on changes).
 - Add unit tests for `reducer.js` and integration tests for the main flows.
